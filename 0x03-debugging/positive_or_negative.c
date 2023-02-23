@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
 
 /**
  * positive_or_negative - Determines if a number is positive, negative or zero
@@ -8,7 +11,6 @@
 
 void positive_or_negative(int n)
 {
-	int n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
@@ -24,5 +26,4 @@ void positive_or_negative(int n)
 	{
 		printf("%d is negative\n", n);
 	}
-	return (0);
 }
