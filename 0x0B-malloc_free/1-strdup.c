@@ -1,25 +1,37 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * main - A function that returns a pointer to
- * a newly allocated space in memory
- * Return: Always 0
+ * _strdup - Duplicate a string
+ * @str: The string to be duplucate
+ * Return: The string duplicated
  */
 
-int main(void)
+char *_strdup(char *str)
 {
 
+	int a = 0, i = 1;
 	char *s;
 
-	s = _strdup("ALX SE");
-	if (s == NULL)
+	if (str == NULL)
+		return (NULL);
+
+	while (str[i])
 	{
-		printf("failed to allocate memory\n";
-				return (1);
-				}
-				printf("%s\n", s);
-				free(s);
-				return (0);
-				}
+		i++;
+	}
+
+	s = malloc((sizeof(char) * i) + 1);
+
+	if (s == NULL)
+		return (NULL);
+
+	while (a < i)
+	{
+		s[a] = str[a];
+		a++;
+	}
+
+	s[a] = '\0';
+	return (s);
+}
