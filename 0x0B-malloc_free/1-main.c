@@ -9,7 +9,6 @@
  */
 int main(void)
 {
-
 	char *s;
 
 	s = _strdup("ALX SE");
